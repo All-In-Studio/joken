@@ -389,13 +389,13 @@ defmodule Joken do
 
         # When it fails validation
         false ->
-          Logger.debug(fn ->
-            """
-            Claim %{"#{key}" => #{inspect(claim_val)}} did not pass validation.
-
-            Current time: #{inspect(Joken.current_time())}
-            """
-          end)
+#          Logger.debug(fn ->
+#            """
+#            Claim %{"#{key}" => #{inspect(claim_val)}} did not pass validation.
+#
+#            Current time: #{inspect(Joken.current_time())}
+#            """
+#          end)
 
           message = Keyword.get(config[key].options, :message, "Invalid token")
           {:halt, {:error, message: message, claim: key, claim_val: claim_val}}

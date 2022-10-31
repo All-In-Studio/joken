@@ -27,3 +27,6 @@ joken-*.tar
 
 # Misc
 /bench/snapshots
+
+/.idea
+
